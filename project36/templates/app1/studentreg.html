@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+            border: 1px solid purple;
+            width: 100px;
+            background-color:coral;
+            text-align:left;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            
+        }
+    input[type='text']{
+        background-color:aqua;
+    }
+    </style>
+</head>
+<body>
+    <h2>course regestration form</h2>
+    <form action="/studreg">
+        <table border="2">
+            {{sf.as_table}}
+        </table>
+        <input type="submit" value="register">
+    </form>
+</body>
+</html>

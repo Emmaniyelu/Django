@@ -1,0 +1,51 @@
+{%extends "app1/index.html"%}
+{%block content%}
+<table border="2">
+<form action="dispemp">
+    <tr>
+        <td>deptno</td>
+<td><select name="deptno">
+{%for deptno in dept%}
+<option value={{depno}}>{{deptno}}</option>
+{%endfor%}
+</select>
+</td>
+</tr>
+<tr>
+    <td><input type="submit" value="Display"></td>
+</tr>
+</form>
+</table>
+<table border="2" With="100%">
+    <tr>
+                <th>Empno</th>
+                <th>Empname</th>
+                <th>job</th>
+                <th>salary</th>
+                <th>Deptname</th>
+            </tr>
+
+            {%for emp in qs%}
+            <tr>
+                <td>
+                    {{emp.empno}}
+                </td>
+                <td>
+                    {{emp.ename}}
+                </td>
+               <td>
+                {{emp.job}}
+            </td>
+            <td>
+                {{emp.sal}}
+            </td>
+            <td>
+                {{emp.dept.dname}}
+            </td>
+        </tr>
+        {%endfor%}
+    </table>
+    {%endblock%}
+
+
+   
